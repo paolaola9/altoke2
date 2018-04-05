@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".HOMER" />
-        <activity android:name=".HOME"></activity>
+        <activity android:name=".HOME" />
+        <activity
+            android:name=".menu"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
