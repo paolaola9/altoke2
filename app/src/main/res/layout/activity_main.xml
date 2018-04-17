@@ -6,16 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.spacex.altoke.MainActivity">
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="202dp"
-        android:layout_height="41dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:layout_editor_absoluteX="81dp" />
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="185dp" />
 
     <Button
         android:id="@+id/button2"
@@ -30,7 +27,7 @@
         android:layout_height="41dp"
         android:text="Button"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="186dp" />
+        tools:layout_editor_absoluteY="235dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -44,7 +41,7 @@
         android:layout_width="200dp"
         android:layout_height="41dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="186dp" />
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="288dp" />
 
 </android.support.constraint.ConstraintLayout>

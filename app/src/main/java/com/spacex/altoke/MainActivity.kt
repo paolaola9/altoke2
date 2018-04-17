@@ -12,14 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    button12.setOnClickListener(){
+    /*button12.setOnClickListener(){
         var intent  = Intent(this,HOME::class.java)
 
                 startActivity(intent)
 
         Toast.makeText(this, "hola mundo",Toast.LENGTH_SHORT).show()
 
-        }
+        }*/
+
     }
 
 }
