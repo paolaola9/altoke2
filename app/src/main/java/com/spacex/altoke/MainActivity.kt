@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
+import com.facebook.FacebookSdk
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,14 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    /*button12.setOnClickListener(){
-        var intent  = Intent(this,HOME::class.java)
+    button.setOnClickListener(){
+        var intent  = Intent(this,menu::class.java)
 
                 startActivity(intent)
 
         Toast.makeText(this, "hola mundo",Toast.LENGTH_SHORT).show()
 
-        }*/
+        }
 
     }
 

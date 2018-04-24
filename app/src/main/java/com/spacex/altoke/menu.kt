@@ -10,22 +10,25 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_menu.*
-import kotlinx.android.synthetic.main.app_bar_menu.*
+import kotlinx.android.synthetic.main.app_bar_menu.fab
 import kotlinx.android.synthetic.main.content_menu.*
+import kotlinx.android.synthetic.main.content_menu.view.*
 
 class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    private val listItems: ArrayList<ServiceItem> = ArrayList();
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        rcvServices.layoutManager = LinearLayoutManager (this)
-        rcvServices.adapter = ServiceItemAdapter()
+        sublayout.rcvServices.layoutManager = LinearLayoutManager (this)
+        listItems.add(ServiceItem(R.drawable.abc_ab_share_pack_mtrl_alpha, "Item1"))
+        listItems.add(ServiceItem(R.drawable.abc_ab_share_pack_mtrl_alpha, "Item2"))
+        listItems.add(ServiceItem(R.drawable.abc_ab_share_pack_mtrl_alpha, "Item3"))
+        sublayout.rcvServices.adapter = ServiceItemAdapter(listItems, this)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -74,12 +77,7 @@ class menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.nav_manage -> {
 
             }
-            R.id.nav_share -> {
 
-            }
-            R.id.nav_send -> {
-
-            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
